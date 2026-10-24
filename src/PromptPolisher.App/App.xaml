@@ -1,0 +1,7 @@
+<Application x:Class="PromptPolisher.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- 注意：本应用不使用 StartupUri（MainWindow 需要 DI 构造），
+         WPF 不会为 App.xaml 生成 InitializeComponent，因此这里不要放全局资源；
+         窗口级资源请放在各自的 Window.Resources。 -->
+</Application>

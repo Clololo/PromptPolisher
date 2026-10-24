@@ -1,0 +1,91 @@
+{
+  "defaultProviderId": "deepseek-web",
+  "saveHistory": true,
+  "storePromptContent": true,
+  "requestTimeoutSeconds": 60,
+  "retryCount": 2,
+  "streamByDefault": true,
+  "webAutomationConsent": false,
+  "providers": [
+    {
+      "id": "deepseek-api",
+      "displayName": "DeepSeek（官方 API，可选备用）",
+      "kind": "Api",
+      "enabled": false,
+      "requiresLogin": false,
+      "baseUrl": "https://api.deepseek.com",
+      "model": "deepseek-chat",
+      "notes": "可选备用。需要 API Key；免费网页版不可用/被限制时再启用。"
+    },
+    {
+      "id": "doubao-api",
+      "displayName": "豆包 / 火山方舟（官方 API，可选备用）",
+      "kind": "Api",
+      "enabled": false,
+      "requiresLogin": false,
+      "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
+      "model": "请填写你的 Endpoint ID",
+      "notes": "可选备用。需要火山方舟 Endpoint ID 与 API Key。"
+    },
+    {
+      "id": "deepseek-web",
+      "displayName": "DeepSeek 网页版（实验性）",
+      "kind": "Web",
+      "enabled": true,
+      "requiresLogin": true,
+      "loginUrl": "https://chat.deepseek.com/",
+      "chatUrl": "https://chat.deepseek.com/",
+      "notes": "网页自动化可能违反平台条款；仅在平台允许时使用。遇验证码会停止。",
+      "selectors": {
+        "input": ["textarea", "div[contenteditable='true']"],
+        "sendButton": ["button[type='submit']", "button[aria-label*='发送']", "div[role='button'][aria-label*='发送']"],
+        "response": [".ds-markdown", "[class*='markdown']"],
+        "generating": ["button[aria-label*='停止']", "[class*='stop']"],
+        "captchaText": ["安全验证", "人机验证", "拖动滑块", "请完成验证", "captcha"],
+        "captchaUrl": ["captcha", "verify", "risk"],
+        "loginUrl": ["login", "signin", "sign-in"],
+        "loginText": ["扫码登录", "手机号登录", "登录/注册", "验证码登录"],
+        "loggedIn": ["textarea", "div[contenteditable='true']"]
+      }
+    },
+    {
+      "id": "doubao-web",
+      "displayName": "豆包网页版（实验性）",
+      "kind": "Web",
+      "enabled": true,
+      "requiresLogin": true,
+      "loginUrl": "https://www.doubao.com/chat/",
+      "chatUrl": "https://www.doubao.com/chat/",
+      "notes": "网页自动化可能违反平台条款；仅在平台允许时使用。遇验证码会停止。",
+      "selectors": {
+        "input": ["textarea", "div[contenteditable='true']"],
+        "sendButton": ["button[type='submit']", "button[aria-label*='发送']", "[data-testid*='send']"],
+        "response": ["[class*='markdown']", "[data-testid*='message']"],
+        "generating": ["button[aria-label*='停止']", "[class*='stop']"],
+        "captchaText": ["安全验证", "人机验证", "拖动滑块", "请完成验证", "captcha"],
+        "captchaUrl": ["captcha", "verify", "risk"],
+        "loginUrl": ["login", "signin", "sign-in"],
+        "loginText": ["扫码登录", "手机号登录", "登录/注册", "验证码登录"],
+        "loggedIn": ["textarea", "div[contenteditable='true']"]
+      }
+    },
+    {
+      "id": "manual",
+      "displayName": "手动模式（最合规）",
+      "kind": "Manual",
+      "enabled": true,
+      "requiresLogin": false,
+      "notes": "应用生成最终 Prompt，你复制到任意网页版，完成后把结果粘贴回来。"
+    },
+    {
+      "id": "mock-api",
+      "displayName": "本地 Mock（验收用）",
+      "kind": "Api",
+      "enabled": false,
+      "requiresLogin": false,
+      "baseUrl": "http://127.0.0.1:8765/v1",
+      "model": "mock",
+      "notes": "运行 tools/mock_openai_server.py，启用此提供方并填任意 Key。"
+    }
+  ]
+}
