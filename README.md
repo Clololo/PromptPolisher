@@ -1,5 +1,7 @@
 # Prompt 润色工具（Prompt Polisher）
 
+<img src="assets/icon-1024.png" width="96" alt="PromptPolisher 图标" align="right" />
+
 一个 Windows 桌面应用：粘贴原始 Prompt，选择模型提供方与润色参数，应用在后台调用模型并把润色结果返回界面。**不弹出外部浏览器窗口**；支持官方 API、实验性网页版会话、以及最合规的手动模式。
 
 > 当前版本：**v1.0.0** ｜ 仓库：<https://github.com/Clololo/PromptPolisher> ｜ Release 提供 self-contained 单文件 exe

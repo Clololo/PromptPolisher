@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Prompt 润色工具"
+        Icon="Assets/app.ico"
         Height="620" Width="1120" MinHeight="560" MinWidth="1000"
         WindowStartupLocation="CenterScreen"
         FocusManager.FocusedElement="{Binding ElementName=InputTextBox}"
