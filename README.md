@@ -4,7 +4,7 @@
 
 一个 Windows 桌面应用：粘贴原始 Prompt，选择模型提供方与润色参数，应用在后台调用模型并把润色结果返回界面。**不弹出外部浏览器窗口**；支持官方 API、实验性网页版会话、以及最合规的手动模式。
 
-> 当前版本：**v1.0.0** ｜ 仓库：<https://github.com/Clololo/PromptPolisher> ｜ Release 提供 self-contained 单文件 exe
+> 当前版本：**v1.0.1** ｜ 仓库：<https://github.com/Clololo/PromptPolisher> ｜ Release 提供 self-contained 单文件 exe
 
 > **默认免费网页版：** 应用默认使用 DeepSeek 网页版（可在设置切换豆包网页版）。首次需手动登录；遇到验证码/风控会停止，不会绕过。若平台限制自动化，可切换“手动模式”，或启用官方 API（可选备用）。详见 [docs/COMPLIANCE.md](docs/COMPLIANCE.md)。
 
